@@ -1,0 +1,200 @@
+/*
+============================================================
+ReMarkdown, a stylesheet displaying HTML text as if it were
+plain Markdown text. By Florent Verschelde (fvsch.com).
+Documentation: http://covertprestige.info/css/remarkdown/
+License: http://covertprestige.info/css/remarkdown/COPYING
+         This file is published under the Do What The Fuck
+         You Want To Public License (WTFPL), Version 2.
+============================================================
+Modified by Pixel Machine
+============================================================
+*/
+
+/* --- PIXEL MACHINE CUSTOM STYLES --- */
+a, a:link, a:visited {
+  text-decoration: none;
+  color: #000;
+}
+a:hover, a:active, a:focus {
+  color: #ae071d;
+}
+
+/* --- PAGE LAYOUT - OPTIONAL --- */
+
+@media screen {
+  body {
+	font-size: 0.813em;
+    max-width: 500px;
+    margin: 0;
+    padding: 3em 9em;
+    color: #000;
+    background: white;
+  }
+}
+@media screen and (max-width:40em) {
+  body {
+  	max-width: none;
+  	padding: 3em;
+  }
+}
+
+/* iPad [portrait + landscape] */
+@media screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+	body {
+		font-size: 125%;
+		max-width: none;
+		padding: 2em 4em 3em;
+	}
+}
+
+/* iPhone [portrait + landscape] */
+@media screen and (max-device-width: 480px) {
+	body {
+		font-size: 250%;
+	  	max-width: none;
+		padding: 2em 3em;
+	}
+}
+
+@media print {
+  body { font-size: 10pt; }
+}
+#wrapper {
+	margin-top: -2px;
+}
+#wrapper>header h1 {
+	vertical-align: baseline;
+}
+#wrapper>header img {
+	height: 4em;
+	position: relative;
+	top: 1.3em;
+
+}
+
+/* --- COMMON TEXT STYLES --- */
+.rmd-on {
+  font-family: Monaco, "DejaVu Sans Mono", "Lucida Console", monospace;
+  line-height: 1.4;
+}
+
+/* --- TITLES --- */
+
+/* Titles - common styles */
+.rmd-on h1,
+.rmd-on h2 {
+  font-weight: normal;
+  font-size: 1em;
+  display: inline-block;
+  margin: 1.4em 0;
+  position: relative;
+  overflow: hidden;
+  vertical-align: top;
+  padding-bottom: 1.4em;
+ }
+.rmd-on h1 {
+	text-transform: uppercase;
+}
+.rmd-on h2 {
+	margin-top: 0;
+}
+h1:before,
+h2:before {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1.4em;
+  overflow: hidden;
+}
+h1:before {
+  content: "=======\00a0\00a0\00a0======================================================"
+  "=========================================================================";
+z-index: 999;
+}
+h2:before {
+  content: "----------------------------------------------------------------"
+  "-------------------------------------------------------------------------";
+}
+
+/* --- PARAGRAPHS AND INLINE CONTENT --- */
+
+/* Paragraphs */
+.rmd-on p {
+  margin: 0 0 1.4em 0;
+}
+
+/* --- LISTS --- */
+
+/* Common */
+.rmd-on ul,
+.rmd-on ol {
+  margin: 0 0 1.4em 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Ordered lists (with options for bullets) */
+.rmd-on ul {
+  margin-left: 2.4em;
+  margin-left: 4ch;
+}
+.rmd-on ul > li:before {
+  float: left;
+  margin-left: -2.4em;
+  margin-left: -4ch;
+}
+.rmd-on ul > li:before, .rmd-ul-plus ul > li:before, ul.rmd-plus > li:before {
+  content: "+";
+}
+
+/* --- HORIZONTAL RULES --- */
+
+.rmd-on hr {
+  height: 1.4em;
+  margin: 2.8em 0;
+  border: none;
+  line-height: 1.4em;
+  color: inherit;
+}
+.rmd-on hr:before {
+  content: "* * * *";
+  position: relative;
+  top: .25em;
+}
+
+/* --- HORIZONTAL FOOTER RULES --- */
+#wrapper>footer {
+	position: relative;
+	padding: 1.4em 0;
+	display: block;
+	overflow: hidden;
+}
+#wrapper>footer p {
+/*	margin:  .7em 0 0 0;*/
+	/*background: transparent url(../img/pixelmachine.png) no-repeat -.7em left;*/
+}
+#wrapper>footer p img {
+	vertical-align: middle;
+	margin-right: 1em;
+	position: relative;
+	top: -6px;
+}
+#wrapper>footer:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1.4em;
+  overflow: hidden;
+  content: "----------------------------------------------------------------"
+  "-------------------------------------------------------------------------";
+}
+#wrapper>footer:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1.4em;
+  overflow: hidden;
+  content: "----------------------------------------------------------------"
+  "-------------------------------------------------------------------------";
+}

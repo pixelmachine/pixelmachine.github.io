@@ -1,0 +1,10 @@
+h1, h2 {
+	&:after {
+		left: -50px;
+		right: -50px;
+	}
+}
+
+#wrapper {
+	padding: 50px;
+}

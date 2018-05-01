@@ -1,0 +1,262 @@
+/******************************************************************
+Site Name: Pixel Machine
+Author: Jamie Grisdale
+******************************************************************/
+/*********************
+Text Sizes
+*********************/
+/*********************
+BE Colours
+*********************/
+/*********************
+TYPE
+*********************/
+article,
+footer,
+header,
+section {
+  display: block; }
+
+[hidden],
+template {
+  display: none; }
+
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+body {
+  margin: 0; }
+
+a {
+  background: transparent; }
+
+a:focus {
+  outline: thin dotted; }
+
+a:active,
+a:hover {
+  outline: 0; }
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+img {
+  border: 0; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+* {
+  box-sizing: border-box; }
+
+.image-replacement,
+.ir {
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden; }
+
+.clearfix, .cf {
+  zoom: 1; }
+  .clearfix:before, .clearfix:after, .cf:before, .cf:after {
+    content: "";
+    display: table; }
+  .clearfix:after, .cf:after {
+    clear: both; }
+
+p {
+  -webkit-font-feature-settings: "liga", "dlig";
+          font-feature-settings: "liga", "dlig"; }
+
+html,
+body {
+  line-height: 1.5;
+  min-width: 320px;
+  min-height: 100vh;
+  position: relative; }
+
+body {
+  font-family: 'Rubik', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #eee;
+  color: #03ab9e;
+  font-size: 24px;
+  letter-spacing: 0.25px;
+  font-weight: 300;
+  -webkit-transition-property: font-size background-color color;
+  transition-property: font-size background-color color;
+  -webkit-transition-duration: .3s;
+          transition-duration: .3s;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease; }
+
+/*********************
+LINK STYLES
+*********************/
+a, a:visited {
+  color: inherit;
+  text-decoration: none;
+  -webkit-transition-property: color 1s ease-out;
+  transition-property: color 1s ease-out;
+  display: inline-block;
+  padding: 0 0.25em;
+  margin: 0 -0.25em;
+  position: relative; }
+  a:before, a:visited:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0%;
+    background-color: #fafafa;
+    -webkit-transition: all 1s ease-out;
+    transition: all 1s ease-out;
+    z-index: -1; }
+  a:hover, a:focus, a:visited:hover, a:visited:focus {
+    color: #ff673d;
+    outline: 0 none;
+    -webkit-transition: color .25s ease;
+    transition: color .25s ease; }
+    a:hover:before, a:focus:before, a:visited:hover:before, a:visited:focus:before {
+      width: 100%;
+      background-color: #eee;
+      -webkit-transition: all .25s ease;
+      transition: all .25s ease; }
+  a:link, a:visited:link {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0.3); }
+
+/******************************************************************
+H1, H2, H3, H4, H5 STYLES
+******************************************************************/
+h1, h2 {
+  font-size: 125%;
+  font-family: 'Rubik', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizelegibility;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  text-shadow: #eee 1px 1px, #b9e5ee 2px 2px, #eee 3px 3px, #b9e5ee 4px 4px;
+  position: relative; }
+  h1 a, h2 a {
+    text-decoration: none; }
+  h1:after, h2:after {
+    content: "";
+    border-bottom: 0.1em solid #eee;
+    width: auto;
+    top: 123%;
+    left: -20px;
+    right: -20px;
+    position: absolute; }
+
+h1 {
+  margin-top: 0; }
+
+#wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 16px 20px;
+  background-color: #fafafa;
+  min-height: 100vh;
+  z-index: 1;
+  position: relative; }
+
+footer {
+  display: none; }
+
+::-moz-selection {
+  color: #03ab9e;
+  background: #eee; }
+
+::selection {
+  color: #03ab9e;
+  background: #eee; }
+
+@media only screen and (min-width: 600px) {
+  body {
+    font-size: 4vmin; }
+  h1:after, h2:after {
+    left: -30px;
+    right: -30px; }
+  #wrapper {
+    padding: 30px; }
+  a:hover, a:focus, a:visited:hover, a:visited:focus {
+    color: #ff673d; } }
+
+@media only screen and (min-width: 768px) {
+  h1:after, h2:after {
+    left: -50px;
+    right: -50px; }
+  #wrapper {
+    padding: 50px; } }
+
+@media only screen and (min-width: 1030px) {
+  body {
+    font-size: 40px; } }
+
+@media print {
+  /******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Print Stylesheet
+
+This is the print stylesheet. There's probably not a lot
+of reasons to edit this stylesheet. If you want to
+though, go for it.
+
+******************************************************************/
+  * {
+    background: transparent !important;
+    color: black !important;
+    text-shadow: none !important;
+    -webkit-filter: none !important;
+            filter: none !important;
+    -ms-filter: none !important; }
+  a, a:visited {
+    color: #444 !important;
+    text-decoration: underline; }
+    a:after, a:visited:after {
+      content: " (" attr(href) ")"; }
+    a abbr[title]:after, a:visited abbr[title]:after {
+      content: " (" attr(title) ")"; }
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: ""; }
+  pre, blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid; }
+  thead {
+    display: table-header-group; }
+  tr, img {
+    page-break-inside: avoid; }
+  img {
+    max-width: 100% !important; }
+  @page {
+    margin: 0.5cm; }
+  p, h2, h3 {
+    orphans: 3;
+    widows: 3; }
+  h2,
+  h3 {
+    page-break-after: avoid; }
+  .sidebar,
+  .page-navigation,
+  .wp-prev-next,
+  .respond-form,
+  nav {
+    display: none; } }
