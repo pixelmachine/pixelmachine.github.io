@@ -2,3 +2,4 @@
 *.codekit3
 blg
 scss/.sass-cache
+.DS_Store
